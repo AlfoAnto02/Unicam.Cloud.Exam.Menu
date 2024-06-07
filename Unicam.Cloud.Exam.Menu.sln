@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Unicam.Cloud.Exam.Menu.Web", "Unicam.Cloud.Exam.Menu\Unicam.Cloud.Exam.Menu.Web.csproj", "{2286629F-B12F-4536-86DE-257DB29D5C80}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Unicam.Cloud.Exam.Menu.Models", "Unicam.Cloud.Exam.Menu.Models\Unicam.Cloud.Exam.Menu.Models.csproj", "{EE72FBF2-1CDF-4802-8B97-D2D4D581301E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Unicam.Cloud.Exam.Menu.Application", "Unicam.Cloud.Exam.Menu.Application\Unicam.Cloud.Exam.Menu.Application.csproj", "{D6456731-DB1B-4371-B234-487B0F2080AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2286629F-B12F-4536-86DE-257DB29D5C80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2286629F-B12F-4536-86DE-257DB29D5C80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2286629F-B12F-4536-86DE-257DB29D5C80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2286629F-B12F-4536-86DE-257DB29D5C80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE72FBF2-1CDF-4802-8B97-D2D4D581301E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE72FBF2-1CDF-4802-8B97-D2D4D581301E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE72FBF2-1CDF-4802-8B97-D2D4D581301E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE72FBF2-1CDF-4802-8B97-D2D4D581301E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6456731-DB1B-4371-B234-487B0F2080AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6456731-DB1B-4371-B234-487B0F2080AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6456731-DB1B-4371-B234-487B0F2080AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6456731-DB1B-4371-B234-487B0F2080AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D6AC8908-7A3A-46B5-AA5D-60EFEB5C3C20}
+	EndGlobalSection
+EndGlobal
