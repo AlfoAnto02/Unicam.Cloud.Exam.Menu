@@ -5,12 +5,14 @@ using Unicam.Cloud.Exam.Menu.Application.Factories;
 namespace Unicam.Cloud.Exam.Menu.Web.Extensions {
     public static class MiddlewareExtensions {
         public static WebApplication? AddWebMiddlewares(this WebApplication? app) {
-            if (app.Environment.IsDevelopment()) {
-                app.UseSwagger();
-                app.UseSwaggerUI();
-            }
-
+            app.UseHttpsRedirection();
+            app.UseRouting();
             app.UseAuthorization();
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c=> {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Menu API v1");
+            });
 
             app.UseExceptionHandler(appError => {
                 appError.Run(async context => {

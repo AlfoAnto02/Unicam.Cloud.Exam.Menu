@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Unicam.Cloud.Exam.Menu.Application\Unicam.Cloud.Exam.Menu.Application.csproj" />
+    <ProjectReference Include="..\Unicam.Cloud.Exam.Menu.Models\Unicam.Cloud.Exam.Menu.Models.csproj" />
   </ItemGroup>
 
 </Project>

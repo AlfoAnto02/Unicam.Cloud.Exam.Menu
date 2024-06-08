@@ -1,4 +1,5 @@
-﻿using Unicam.Cloud.Exam.Menu.Web.Results;
+﻿using Microsoft.OpenApi.Models;
+using Unicam.Cloud.Exam.Menu.Web.Results;
 
 namespace Unicam.Cloud.Exam.Menu.Web.Extensions {
     public static class ServiceExtensions {
@@ -12,9 +13,15 @@ namespace Unicam.Cloud.Exam.Menu.Web.Extensions {
                });
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen(c => {
-                c.SwaggerDoc("v1", new() {
+                c.SwaggerDoc("v1", new OpenApiInfo 
+                {
                     Title = "Unicam.Cloud.Exam",
-                    Version = "v1"
+                    Version = "v1",
+                    Contact = new OpenApiContact {
+                        Name = "Alfonso Antognozzi",
+                        Email = string.Empty,
+                        Url = new Uri("https://unicamcloudexammenuwebapp.azurewebsites.net"),
+                    },
                 });
             });
             return services;

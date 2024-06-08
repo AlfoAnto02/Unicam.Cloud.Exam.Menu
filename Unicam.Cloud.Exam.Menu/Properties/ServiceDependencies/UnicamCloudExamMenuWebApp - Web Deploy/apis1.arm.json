@@ -4,7 +4,7 @@
   "parameters": {
     "resourceGroupName": {
       "type": "string",
-      "defaultValue": "unicamCloudExamDemo",
+      "defaultValue": "UnicamCloudExamMenuWeb",
       "metadata": {
         "_parameterType": "resourceGroup",
         "description": "Nome del gruppo di risorse per la risorsa. Per un rilevamento ottimale è consigliabile inserire le risorse nello stesso gruppo di risorse."
@@ -12,7 +12,7 @@
     },
     "resourceGroupLocation": {
       "type": "string",
-      "defaultValue": "italynorth",
+      "defaultValue": "eastus",
       "metadata": {
         "_parameterType": "location",
         "description": "Percorso del gruppo di risorse. Il percorso dei gruppi di risorse può essere diverso rispetto a quello delle risorse."
@@ -36,7 +36,7 @@
     },
     {
       "type": "Microsoft.Resources/deployments",
-      "name": "[concat(parameters('resourceGroupName'), 'Deployment', uniqueString(concat('UnicamCloudExamMenuWeb', subscription().subscriptionId)))]",
+      "name": "[concat(parameters('resourceGroupName'), 'Deployment', uniqueString(concat('UnicamCloudExamMenuWebAPI', subscription().subscriptionId)))]",
       "resourceGroup": "[parameters('resourceGroupName')]",
       "apiVersion": "2019-10-01",
       "dependsOn": [
@@ -49,7 +49,7 @@
           "contentVersion": "1.0.0.0",
           "resources": [
             {
-              "name": "UnicamCloudExamMenuWebapi",
+              "name": "UnicamCloudExamMenuWebapiGestor",
               "type": "Microsoft.ApiManagement/service",
               "location": "[parameters('resourceLocation')]",
               "properties": {
@@ -59,7 +59,7 @@
                 "hostnameConfigurations": [
                   {
                     "type": "Proxy",
-                    "hostName": "unicamcloudexammenuwebapi.azure-api.net",
+                    "hostName": "unicamcloudexammenuwebapigestor.azure-api.net",
                     "encodedCertificate": null,
                     "keyVaultId": null,
                     "certificatePassword": null,
@@ -95,9 +95,9 @@
             },
             {
               "type": "Microsoft.ApiManagement/service/apis",
-              "name": "UnicamCloudExamMenuWebapi/UnicamCloudExamMenuWeb",
+              "name": "UnicamCloudExamMenuWebapiGestor/UnicamCloudExamMenuWebAPI",
               "properties": {
-                "displayName": "UnicamCloudExamMenuWeb",
+                "displayName": "UnicamCloudExamMenuWebAPI",
                 "apiRevision": "1",
                 "description": null,
                 "subscriptionRequired": true,
@@ -118,7 +118,7 @@
               },
               "apiVersion": "2019-12-01",
               "dependsOn": [
-                "UnicamCloudExamMenuWebapi"
+                "UnicamCloudExamMenuWebapiGestor"
               ]
             }
           ]
