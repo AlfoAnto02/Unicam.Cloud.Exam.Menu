@@ -34,11 +34,19 @@ namespace Unicam.Cloud.Exam.Menu.Application.Services {
         }
 
         public async Task<IEnumerable<DishType>> GetAllAsync() {
-            return await dishTypeRepository.GetAllAsync();
+            var dishTypes = await dishTypeRepository.GetAllAsync();
+            if(dishTypes.Count() == 0) {
+                throw new InvalidOperationException("No dish types found");
+            }
+            return dishTypes;
         }
 
         public async Task<DishType> GetByIdAsync(int id) {
-            return await dishTypeRepository.GetByIdAsync(id);
+            var dishType = await dishTypeRepository.GetByIdAsync(id);
+            if(dishType == null) {
+                throw new InvalidOperationException("Dish type not found");
+            }
+            return dishType;
         }
 
         public async Task UpdateAsync(int id, DishType entity) {
